@@ -54,6 +54,35 @@ else
 fi
 rm -rf "$TEMP_REPO_DIR"
 
+# Definiere den Namen des Service und den Pfad zur run.sh
+SERVICE_NAME=FXServer
+FXSERVER_PATH="/home/cfx/FXServer/server"
+RUN_SCRIPT="run.sh"
+
+# Erstelle das systemd service file
+cat <<EOF > /etc/systemd/system/$SERVICE_NAME.service
+[Unit]
+Description=FXServer Service
+After=network.target
+
+[Service]
+Type=simple
+User=cfx
+WorkingDirectory=$FXSERVER_PATH
+ExecStart=/bin/bash $FXSERVER_PATH/$RUN_SCRIPT
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Aktiviere und starte den Service
+systemctl enable $SERVICE_NAME.service
+systemctl start $SERVICE_NAME.service
+
+echo "$SERVICE_NAME Service wurde erstellt und gestartet."
+
 # Überprüfen, ob MySQL oder MariaDB installiert ist
 if dpkg -l | grep -qE '^ii\s+(mariadb-server|mysql-server)'; then
     echo "MariaDB oder MySQL ist bereits installiert."
