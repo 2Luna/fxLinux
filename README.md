@@ -1,0 +1,2 @@
+# fxLinux
+FiveM / FXServer installer
