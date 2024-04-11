@@ -42,9 +42,25 @@ Nach der Installation und Konfiguration durch das Skript:
 - **Setzen Sie das Passwort für den `cfx` Benutzer** mit dem Befehl `passwd cfx`, falls erforderlich.
 - **Überprüfen Sie die Installation von MySQL oder MariaDB**, falls Sie vorhaben, SQL-abhängige Systeme wie ESX oder qb-core zu verwenden. Installieren Sie diese nach Bedarf.
 
-### 4. fxLinux Installations-Skript
+### 4. Verwendung von FiveMStart
 
-Falls Sie zusätzliche Konfigurationen oder Installationen durch das `fxLinux` Skript von GitHub wünschen, besuchen Sie das Repository unter `https://github.com/2Luna/fxLinux` und folgen Sie den dortigen Anweisungen zur Ausführung des Installations-Skripts.
+Nach der erfolgreichen Einrichtung und Konfiguration Ihres FXServers sollten Sie das `FiveMStart`-Skript ausführen, welches speziell für die Initialisierung und Verwaltung Ihres FiveM Servers entwickelt wurde. Dieses Skript automatisiert viele der routinemäßigen Aufgaben, die für den Betrieb eines stabilen und sicheren FiveM-Servers notwendig sind.
+
+Um das `FiveMStart`-Skript zu nutzen, folgen Sie bitte diesen Schritten:
+
+1. Das Skript wird automatisch im Zuge der Server-Einrichtung heruntergeladen und im Verzeichnis `/home/cfx/FXServer/server/` gespeichert.
+2. Es ersetzt die standardmäßige `run.sh` durch eine spezialisierte Version, die im `FiveMStart`-Repository bereitgestellt wird, um eine optimierte Server-Startprozedur zu gewährleisten.
+3. Um den Server zu starten, navigieren Sie zum Server-Verzeichnis und führen Sie `./run.sh` aus.
+
+Das `FiveMStart`-Skript unterstützt Sie bei:
+
+- Automatischer Konfiguration essentieller Server-Parameter.
+- Vereinfachung des Startprozesses.
+- Bereitstellung von Tools und Skripten für die Serverwartung und -überwachung.
+
+Bitte stellen Sie sicher, dass Sie die neueste Version des `FiveMStart`-Skripts verwenden, indem Sie regelmäßig Updates aus dem offiziellen GitHub-Repository beziehen: `https://github.com/2Luna/FiveMStart`.
+
+Die Verwendung von `FiveMStart` trägt wesentlich zur Effizienz und Stabilität Ihres FiveM-Servers bei und wird für ein optimales Servermanagement empfohlen.
 
 ## Fazit
 
