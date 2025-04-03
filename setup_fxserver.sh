@@ -27,7 +27,7 @@ mkdir -p /home/cfx/FXServer/server-data
 
 # FXServer-Dateien herunterladen
 echo "Lade FXServer-Dateien herunter..."
-wget -O /home/cfx/FXServer/fx.tar.xz "https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/7878-37639cddcb2e5b0ef05f96d5a482b236b7349a1e/fx.tar.xz"
+wget -O /home/cfx/FXServer/fx.tar.xz "https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/14033-60505548e21b6d6e0844e02e571513e15bff5ccc/fx.tar.xz"
 
 # FXServer-Dateien entpacken
 echo "Entpacke FXServer-Dateien..."
